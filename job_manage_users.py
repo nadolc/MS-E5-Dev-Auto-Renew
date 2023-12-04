@@ -10,6 +10,7 @@ class ManageUsers():
     
     # Get current user count
     def get_user_count(self):
+        print(self.access_token)
         response = call_api_get("https://graph.microsoft.com/v1.0/users", self.access_token)
         return len(response.json()["value"])
     
